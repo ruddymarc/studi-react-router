@@ -4,6 +4,7 @@ import Layout from './screens/Layout';
 import Home from './screens/Home';
 import About from './screens/About';
 import UserList from './screens/UserList';
+import UserDetails from './screens/UserDetails';
 import UnknownRoute from './screens/UnkownRoute';
 
 export default createBrowserRouter([
@@ -14,6 +15,7 @@ export default createBrowserRouter([
       { index: true, element: <Home /> },
       { path: 'infos', element: <About /> },
       { path: 'users', element: <UserList /> },
+      { path: 'user/:userId', element: <UserDetails /> },
       { path: '*', element: <UnknownRoute /> },
     ]
   },
