@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import Layout from './screens/Layout';
 import Home from './screens/Home';
 import About from './screens/About';
@@ -14,5 +14,6 @@ export default createBrowserRouter([
       { path: 'infos', element: <About /> },
       { path: '*', element: <UnknownRoute /> },
     ]
-  }
+  },
+  { path: 'about', element: <Navigate to='/infos' replace /> }
 ])
