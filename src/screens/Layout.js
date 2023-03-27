@@ -1,6 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Menu from '../components/Menu';
+import SearchForm from '../components/SearchForm';
  
 /**
  * Show main layout
@@ -18,6 +19,7 @@ export default function Layout() {
         padding: '1rem',
       }}>
         <Menu />
+        <SearchForm />
       </aside>
       <main>
         <Outlet />
